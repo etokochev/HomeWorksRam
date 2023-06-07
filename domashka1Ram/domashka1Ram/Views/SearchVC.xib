@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchVC" customModule="domashka1Ram" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="nvs-06-Dx8">
+            <view key="view" contentMode="scaleToFill" id="9YL-L1-Oiu">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск продукта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvR-OT-pU9">
+                        <rect key="frame" x="129" y="73" width="135.33333333333337" height="21.666666666666671"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <searchBar contentMode="redraw" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="8wG-hC-J0Q">
+                        <rect key="frame" x="17" y="110" width="357" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="ZMX-Dv-8gY"/>
+                        </constraints>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="nvs-06-Dx8" id="wuI-NV-sTk"/>
+                        </connections>
+                    </searchBar>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jqR-hv-nB3">
+                        <rect key="frame" x="0.0" y="166.66666666666669" width="393" height="592.33333333333326"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </tableView>
+                    <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYp-DA-uay">
+                        <rect key="frame" x="0.0" y="759" width="393" height="56"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="56" id="wCb-yp-K5w"/>
+                        </constraints>
+                        <items>
+                            <tabBarItem title="Home" image="house" catalog="system" id="ZK5-hv-3te"/>
+                            <tabBarItem title="Search" image="magnifyingglass" catalog="system" id="C7y-jg-Igh"/>
+                            <tabBarItem title="Add Product" image="person" catalog="system" id="rr6-LA-6pn"/>
+                        </items>
+                    </tabBar>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="v2b-ij-G27"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="jqR-hv-nB3" firstAttribute="leading" secondItem="v2b-ij-G27" secondAttribute="leading" id="2fw-ir-EEO"/>
+                    <constraint firstItem="dvR-OT-pU9" firstAttribute="top" secondItem="v2b-ij-G27" secondAttribute="top" constant="14" id="4bA-uq-KdZ"/>
+                    <constraint firstItem="v2b-ij-G27" firstAttribute="bottom" secondItem="aYp-DA-uay" secondAttribute="bottom" constant="3" id="HLQ-j0-ySP"/>
+                    <constraint firstItem="jqR-hv-nB3" firstAttribute="top" secondItem="8wG-hC-J0Q" secondAttribute="bottom" constant="13" id="Kv2-kf-i6E"/>
+                    <constraint firstItem="v2b-ij-G27" firstAttribute="trailing" secondItem="8wG-hC-J0Q" secondAttribute="trailing" constant="19" id="LYc-X3-nbD"/>
+                    <constraint firstItem="aYp-DA-uay" firstAttribute="trailing" secondItem="v2b-ij-G27" secondAttribute="trailing" id="bK3-nR-TWX"/>
+                    <constraint firstItem="aYp-DA-uay" firstAttribute="top" secondItem="jqR-hv-nB3" secondAttribute="bottom" id="bhs-NO-Rv7"/>
+                    <constraint firstItem="jqR-hv-nB3" firstAttribute="trailing" secondItem="v2b-ij-G27" secondAttribute="trailing" id="cl8-UV-GEh"/>
+                    <constraint firstItem="8wG-hC-J0Q" firstAttribute="top" secondItem="dvR-OT-pU9" secondAttribute="bottom" constant="15" id="jGl-bE-xGw"/>
+                    <constraint firstItem="dvR-OT-pU9" firstAttribute="centerX" secondItem="v2b-ij-G27" secondAttribute="centerX" id="oti-bi-tNz"/>
+                    <constraint firstItem="8wG-hC-J0Q" firstAttribute="leading" secondItem="v2b-ij-G27" secondAttribute="leading" constant="17" id="qbI-p2-1GY"/>
+                    <constraint firstItem="aYp-DA-uay" firstAttribute="leading" secondItem="v2b-ij-G27" secondAttribute="leading" id="tdd-4y-dGI"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="275.57251908396944" y="-43.661971830985919"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
